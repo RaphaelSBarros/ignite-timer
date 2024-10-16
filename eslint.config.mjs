@@ -10,4 +10,12 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 })
-export default [...compat.extends('@rocketseat/eslint-config/react')]
+
+export default [
+  ...compat.extends('@rocketseat/eslint-config/react'),
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+]
